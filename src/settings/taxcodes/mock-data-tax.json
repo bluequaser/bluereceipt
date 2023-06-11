@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "taxCodeName": "VAT 16%",
+    "fullName": "VAT 16%",
+    "rate": 16
+  },
+  {
+    "id": 2,
+    "taxCodeName": "VAT 8%",
+    "fullName": "VAT 8%",
+    "rate": 8
+  },
+  {
+    "id": 3,
+    "taxCodeName": "Sales Tax",
+    "fullName": "VAT 16%",
+    "rate": 16
+  },
+  {
+    "id": 4,
+    "taxCodeName": "Sales Tax",
+    "fullName": "Catering Levy",
+    "rate": 2
+  }
+]

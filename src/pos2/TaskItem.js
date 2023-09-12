@@ -6,7 +6,6 @@ import {db} from '../firebase'
 import { writeBatch, doc, addDoc, collection, Timestamp, query, orderBy, onSnapshot, where, setDoc } from "firebase/firestore"; 
 import { ComponentToPrint } from './components/ComponentToPrint';
 import { useReactToPrint } from 'react-to-print';
-import InfiniteScroll from "react-infinite-scroll-component";
 
 function TaskItem({onClose, open, invoice_number, invoice_ref,  check_number, mdate, store }) {
   const [invoices, setInvoices] = useState([]);
@@ -45,7 +44,6 @@ function TaskItem({onClose, open, invoice_number, invoice_ref,  check_number, md
   return (
     <Modal modalLable='Task Item' onClose={onClose} open={open}>
       <div className='taskItem'>
-      <InfiniteScroll>
       <div className='mt-3'>
             <div>
                   <button className='btn btn-primary' onClick={handlePrint}>
@@ -86,7 +84,6 @@ function TaskItem({onClose, open, invoice_number, invoice_ref,  check_number, md
 
       </div> 
       {/* end className = 'col-lg-4' */}
-      </InfiniteScroll>
       </div> {/* end className = 'row' */}
     </Modal>
   )

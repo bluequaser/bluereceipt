@@ -6,6 +6,8 @@ import {db} from '../firebase'
 import { writeBatch, doc, addDoc, collection, Timestamp, query, orderBy, onSnapshot, where, setDoc } from "firebase/firestore"; 
 import { toast } from 'react-toastify';
 import { getProducts } from './menuitems_complete';
+import InfiniteScroll from "react-infinite-scroll-component";
+
 
 function AddTask({onClose, open}) {
   const [checked, setChecked] = useState(false)
@@ -704,6 +706,7 @@ function AddTask({onClose, open}) {
   return (
     <Modal modalLable='Add Check' onClose={onClose} open={open}>
       <form onSubmit={handleSubmit} className='addTask' name='addTask'>
+      <InfiniteScroll>
       <div className='row'>Count: {count}</div>
       <div>
       <label for="checkNumber">Check No. </label>
@@ -830,6 +833,7 @@ function AddTask({onClose, open}) {
                 <h2 className='px-2 text-white'>Total Amount: {currency} {totalAmount}</h2>
               </div>
         <button type='submit'>Done</button>
+        </InfiniteScroll>
       </form>
     </Modal>
   )

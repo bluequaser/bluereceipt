@@ -46,6 +46,13 @@ function TaskItem({onClose, open, invoice_number, invoice_ref,  check_number, md
     <Modal modalLable='Task Item' onClose={onClose} open={open}>
       <div className='taskItem'>
       <InfiniteScroll>
+      <div className='mt-3'>
+            <div>
+                  <button className='btn btn-primary' onClick={handlePrint}>
+                    Print
+                  </button>
+           </div>
+      </div>
       <h3>{store}</h3>
         <p>{mdate} Check No : {check_number}</p>
         <div className='row'>
@@ -76,13 +83,7 @@ function TaskItem({onClose, open, invoice_number, invoice_ref,  check_number, md
         </tfoot>
        </table>
       </div>
-      <div className='mt-3'>
-            <div>
-                  <button className='btn btn-primary' onClick={handlePrint}>
-                    Print
-                  </button>
-           </div>
-      </div>
+
       </div> 
       {/* end className = 'col-lg-4' */}
       </InfiniteScroll>
